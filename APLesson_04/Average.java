@@ -6,6 +6,7 @@ public class Average {
 		static double num1;
 		static double num2;
 		static double num3;
+		static double avg;
 	
 	public static void main(String[]args) {
 	// initiate keyboard
@@ -23,15 +24,15 @@ public class Average {
 	
 	}
 	
-	public static double avgcalc() {
+	public static void avgcalc() {
 		
-		return (num1 + num2 +  num3)/3;
+		avg = (num1 + num2 +  num3)/3;
 		
 	}
 	
 	public static void print() {
 		
-		System.out.printf("The average of %f, %f, and %f is %.5f", num1, num2, num3, avgcalc());
+		System.out.printf("The average of %f, %f, and %f is %.5f", num1, num2, num3, avg);
 		
 	}
 	

@@ -21,15 +21,15 @@ public class Rectangle {
 		
 	}
 	
-	public static double pericalculate() {
+	public static void pericalculate() {
 		
-		return ((2*length) + (2*height));
+		perimeter = ((2*length) + (2*height)); 
 		
 	}
 	
 	public static void print() {
 		
-		System.out.printf("Your rectangle is %.5f sq ft around", pericalculate());
+		System.out.printf("Your rectangle is %.5f sq ft around", perimeter);
 		
 	}
 	

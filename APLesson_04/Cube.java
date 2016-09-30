@@ -19,15 +19,15 @@ public class Cube {
 	
 	}
 	
-	public static double sacalc() {
+	public static void sacalc() {
 		
-		return (length*length)*6;
+		sa = (length*length)*6;
 		
 	}
 	
 	public static void print() {
 		
-		System.out.printf("The surface area of a cube with side length %.5f is %.5f.", length, sacalc());
+		System.out.printf("The surface area of a cube with side length %.5f is %.5f.", length, sa);
 		
 	}
 	
