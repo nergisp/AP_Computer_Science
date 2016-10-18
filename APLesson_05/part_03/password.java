@@ -3,11 +3,8 @@ import java.util.Scanner;
 public class password {
 	static String usernametrue;
 	static String passwordtrue;
-	static String usernameinput;
-	static String passwordinput;
+	
 	public static void main(String[]args) {
-		
-		Scanner kb = new Scanner(System.in);
 		
 		usernametrue = "pswag";
 		passwordtrue = "bob";
@@ -17,22 +14,24 @@ public class password {
 	
 	public static void passCheck() {
 		
-		System.out.println("Enter your username: ");
-		usernameinput = kb.nextLine();
-		System.out.println("Enter your password: ");
-		passwordinput = kb.nextLine();
+		Scanner kb = new Scanner(System.in);
 		
-		if (usernameinput == usernametrue || passwordinput == passwordtrue) {
-		System.out.println("You are granted access!"); }
-		else if (usernameinput == usernametrue) {
-			System.out.println("Your passowrd is incorrect!");
-			recursion(); }
-		else if (passwordinput == passwordtrue) {
+		System.out.println("Enter your username: ");
+		String usernameinput = kb.nextLine();
+		System.out.println("Enter your password: ");
+		String passwordinput = kb.nextLine();
+		
+		if (usernameinput.equals(usernametrue) && passwordinput.equals(passwordtrue)) {
+			System.out.println("You are granted access!"); }
+		else if (usernameinput.equals(usernametrue)) {
+			System.out.println("Your password is incorrect!");
+			passCheck(); }
+		else if (passwordinput.equals(passwordtrue)) {
 			System.out.println("Your username is incorrect!");
-			recursion(); }
+			passCheck(); }
 		else {
 			System.out.println("Your username and password are incorrect!");
-			recursion(); }
+			passCheck(); }
 		
 	}
 	
