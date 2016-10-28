@@ -35,8 +35,20 @@ public class APLab_04
 		
 		APLab_04 receipt = new APLab_04();
 		
-		receipt.receiptformat(item_01, item_02, item_03, price_01, price_02, price_03);
+		double subtotal = price_01 + price_02 + price_03;
+		double tax = subtotal*.069;
+		double total = subtotal + tax;
 		
+		System.out.printf("<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>\n");
+		receipt.receiptformat(item_01, price_01);
+		receipt.receiptformat(item_02, price_02);
+		receipt.receiptformat(item_03, price_03);
+		System.out.println("\n");
+		receipt.receiptformat("Subtotal", subtotal);
+		receipt.receiptformat("Tax", tax);
+		receipt.receiptformat("Total", total);
+		System.out.printf("\n__________________________________________");
+		System.out.printf("\n * Thank you for your support *\n\n");
 		
 		// ID CardLayout
 		System.out.printf("\nEnter your first name: ");
@@ -59,41 +71,24 @@ public class APLab_04
 		
 		APLab_04 idcard = new APLab_04();
 		
-		idcard.idformat(school, year, first_name, last_name, title, subject);
+		System.out.printf("***********************************\n");
+		idcard.idformat(school, year);
+		idcard.idformat(first_name, last_name);
+		idcard.idformat(title, subject);
+		System.out.printf("***********************************\n");
+	}
+	
+	public void receiptformat(String item, double price)
+	{
+		
+		System.out.printf("\n* %15s ........ %5.2f", item, price);
 		
 	}
 	
-	public void receiptformat(String item1, String item2, String item3, double price1, double price2, double price3)
+	public void idformat(String item1, String item2)
 	{
 		
-		double subtotal = price1 + price2 + price3;
-		
-		double tax = subtotal*.069;
-		
-		double total = subtotal + tax;
-		
-		System.out.printf("<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>\n");
-		System.out.printf("*  %s ........      %f\n", item1, price1);
-		System.out.printf("*     %s ........      %f\n", item2, price2);
-		System.out.printf("*             %s ........      %f\n", item3, price3);
-		System.out.printf("\n");
-		System.out.printf("*        Subtotal: ........      %f\n", subtotal);
-		System.out.printf("*             Tax: ........      %f\n", tax);
-		System.out.printf("*           Total: ........      %f\n", total);
-		System.out.printf("__________________________________________");
-		System.out.printf(" * Thank you for your support *\n\n");
-		
-	}
-	
-	public void idformat(String school, String year, String first_name, String last_name, String title, String subject)
-	{
-		System.out.printf("***********************************\n");
-		System.out.printf("*  %s           %s *\n", school, year );
-		System.out.printf("*       %s         %s *\n", first_name, last_name);
-		System.out.printf("*       %s  %s *\n", title, subject);
-		System.out.printf("***********************************\n");
-
-		
+		System.out.printf("* %20s\t%20s *\n", item1, item2);
 		
 	}
 }
