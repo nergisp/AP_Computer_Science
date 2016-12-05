@@ -1,24 +1,32 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Keep_Composites {
-	
+	static ArrayList<Integer> nums;
 	public static void main(String[]args) {
 		
-		int[] numbers = new int[15];
-		numbers.add(2);
-		numbers.add(6);
-		numbers.add(8);
-		numbers.add(9);
-		numbers.add(10);
-		numbers.add(12);
-		numbers.add(13);
-		numbers.add(15);
-		numbers.add(17);
-		numbers.add(24);
-		numbers.add(55);
-		numbers.add(66);
-		numbers.add(78);
-		numbers.add(77);
-		numbers.add(79);
-		System.out.println(numbers);
-	} 
+		Integer[] numbers = {2,6,8,9,10,12,13,15,17,24,55,66,78,77,79};
+		nums = new ArrayList<Integer>(Arrays.asList(numbers));
+		removePrimes();
+		System.out.print(nums);
+	}
+	
+	public static int gFactor(int n){
+		for (int i=2; i<n; i++) {
+			if (n%i==0) {
+				return 1;
+			}
+		}
+		return 0;
+		
+	}
+	public static void removePrimes() {
+		for (int i=0; i<nums.size(); i++) {
+			if (gFactor(nums.get(i)) == 0) {
+				nums.remove(i);
+			}
+		}
+	}
 	
 }
