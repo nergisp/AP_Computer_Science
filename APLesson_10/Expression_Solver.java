@@ -18,28 +18,27 @@ public class Expression_Solver {
 		while (i < eq.size()) {
 			if (eq.get(i).equals("*") || eq.get(i).equals("/")) {
 				if(eq.get(i).equals("*")) {
-					eq.set(i, ""+ (Integer.parseInt(eq.get(i-1)) * Integer.parseInt(eq.get(i+1))));
+					eq.set(i, "" + (Integer.parseInt(eq.get(i-1)) * (Integer.parseInt(eq.get(i+1)))));
 				}
 				else {
-					eq.set(i, ""+ (Integer.parseInt(eq.get(i-1)) / Integer.parseInt(eq.get(i+1))));
+					eq.set(i, "" + (Integer.parseInt(eq.get(i-1)) / (Integer.parseInt(eq.get(i+1)))));
 				}
 				eq.remove(i-1);
 				eq.remove(i);
-			}
-			i++;	
-		}
-		while (i < eq.size()) {
-			if (eq.get(i).equals("+") || eq.get(i).equals("-")) {
+			}	
+			else if (eq.get(i).equals("+") || eq.get(i).equals("-")) {
 				if(eq.get(i).equals("+")) {
-					eq.set(i, ""+ (Integer.parseInt(eq.get(i-1)) + Integer.parseInt(eq.get(i+1))));
+					eq.set(i, "" + (Integer.parseInt(eq.get(i-1)) + (Integer.parseInt(eq.get(i+1)))));
 				}
 				else {
-					eq.set(i, ""+ (Integer.parseInt(eq.get(i-1)) - Integer.parseInt(eq.get(i+1))));
+					eq.set(i, "" + (Integer.parseInt(eq.get(i-1)) - (Integer.parseInt(eq.get(i+1)))));
 				}
 				eq.remove(i-1);
 				eq.remove(i);
 			}
-			i++;	
+			else {
+				i++;	
+			}	
 		}
 		return eq;
 	}
