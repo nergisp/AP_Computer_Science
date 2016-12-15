@@ -3,29 +3,24 @@ import java.util.Scanner;
 public class Underscores {
 	static String newsentence;
 
-	public static void main(String[]args) {
+	public static void main(String[] args) {
 		
-		Scanner kb = new Scanner(System.in);
-		
-		System.out.println("Enter a sentence: ");
-		String sentence = kb.nextLine();
-		newsentence="";
-		replace(sentence, 0);
-	}
+        Scanner kb = new Scanner(System.in);
+        
+        System.out.println("Enter a sentence: ");
+	String sentence = kb.nextLine();
+	replace(sentence);
+
+    	}
 	
 	public static void replace(String sent, int i) {
 		
-		if (!(sent.indexOf(' ')>=0)) {
-			sent = newsentence;
-			System.out.println(sent);
-		}
-		else {
-			Character letter = sent.charAt(i);
-			if (letter.equals(' ')) {
-				letter = '_';
-			}
-			newsentence = newsentence + letter;
-			replace(sent,i+1);
-		}
-	}
+		if (sent.indexOf(' ')>0) {
+            sent=sent.substring(0,sent.indexOf(" "))+ "_" + sent.substring(sent.indexOf(" ")+1);
+            replace(sent);
+        }
+	else {
+            System.out.println(sent);
+        }
+}
 }
