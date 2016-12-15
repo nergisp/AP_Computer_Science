@@ -26,7 +26,7 @@ public class AverageDigits {
 		
 		while(num>0) {
 			digits+=1;
-			average = average+digits%10;
+			average = average+num%10;
 			num/=10;
 		}
 		
