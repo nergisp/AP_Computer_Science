@@ -15,7 +15,7 @@ public class TreeDeg60 {
 	public static void tree(String w, int start, int stop) {
 		
 		if (start<=stop) {
-			System.out.printf("%10s",w.substring(0,start));
+			System.out.printf("%10s\n",w.substring(0,start));
 			start+=1;
 			tree(w,start,stop);
 		}

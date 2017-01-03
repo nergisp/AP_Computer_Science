@@ -13,7 +13,7 @@ public class Underscores {
 
     	}
 	
-	public static void replace(String sent, int i) {
+	public static void replace(String sent) {
 		
 		if (sent.indexOf(' ')>0) {
             sent=sent.substring(0,sent.indexOf(" "))+ "_" + sent.substring(sent.indexOf(" ")+1);
