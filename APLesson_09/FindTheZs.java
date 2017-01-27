@@ -18,6 +18,7 @@ public class FindTheZs {
 	public static void fillArray() {
 		Scanner kb = new Scanner(System.in);
 		for (int i = 0; i < words.length; i++) {
+			System.out.println("Enter a word: ");
 			words[i] = kb.next();
 		}
 	}
