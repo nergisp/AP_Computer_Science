@@ -10,7 +10,7 @@ public class Expression_Solver {
 		String expression = kb.nextLine();	
 		
 		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
-		System.out.print(doEquation(equation));
+		System.out.print(doEquation(equation) + "\n");
 	}
 	
 	public static ArrayList<String> doEquation(ArrayList<String> eq) {
@@ -25,8 +25,14 @@ public class Expression_Solver {
 				}
 				eq.remove(i-1);
 				eq.remove(i);
-			}	
-			else if (eq.get(i).equals("+") || eq.get(i).equals("-")) {
+			}
+			else {
+				i++;
+			}
+		}
+		i = 0;
+		while (i < eq.size()) {	
+			if (eq.get(i).equals("+") || eq.get(i).equals("-")) {
 				if(eq.get(i).equals("+")) {
 					eq.set(i, "" + (Integer.parseInt(eq.get(i-1)) + (Integer.parseInt(eq.get(i+1)))));
 				}
@@ -37,8 +43,8 @@ public class Expression_Solver {
 				eq.remove(i);
 			}
 			else {
-				i++;	
-			}	
+				i++;
+			}
 		}
 		return eq;
 	}
