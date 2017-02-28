@@ -1,19 +1,24 @@
-public class Car extends Toy
+public class xbox extends Console
 {
 	//default constructor 
-	public Car()
+	public xbox()
 	{
 		super();
 	}
 	
 	//constructor with parameters
-	public Car(String n)
+	public xbox(String p)
 	{
-		super(n);
+		super(p);
 	}
 	
-		public String getType()
+		public String getController()
 	{
-		return "Car";
+		return "XBox Wireless Controller";
+	}
+
+			public String getPlatform()
+	{
+		return "XBox";
 	}
 }

@@ -1,24 +1,24 @@
-public class xbox extends Console
+public class PlayStation extends Console
 {
 	//default constructor 
-	public xbox()
+	public PlayStation()
 	{
 		super();
 	}
 	
 	//constructor with parameters
-	public xbox(String p)
+	public PlayStation(String p)
 	{
 		super(p);
 	}
 	
 		public String getController()
 	{
-		return "XBox Wireless Controller";
+		return "PS DualShock 3";
 	}
 
 			public String getPlatform()
 	{
-		return "XBox";
+		return "PlayStation";
 	}
 }

@@ -2,8 +2,8 @@ import java.util.Random;
 
 
 public class GameSystem {
-	private String platform;
-	private int serialnum;
+	public String platform;
+	public int serialnum;
 
 	//constructors
 	public GameSystem() {

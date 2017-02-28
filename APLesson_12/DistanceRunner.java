@@ -33,10 +33,6 @@ public class DistanceRunner {
 		object.setValues(x1, y1, x2, y2);
 		
 		System.out.printf("distance is %.2f", object.getDist());
-		
-		
-		
+			
 	}
-	
-	
 }
