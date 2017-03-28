@@ -1,8 +1,17 @@
+
 import java.util.Random;
-import java.util.ArrayList;
-public class GMC {
-	private int x;
-	private int y;
+public class GMC implements Location {
+	int x,y;
+	
+	public GMC() {
+		x=0;
+		y=0;
+	}
+	
+	public int GMC(int xx, int yy) {
+		x=xx;
+		y=yy;
+	}
 	
 	public int getID() {
 		Random rand = new Random();
@@ -14,10 +23,8 @@ public class GMC {
 		y = yy;
 	}
 	
-	public ArrayList<Integer> getLoc() {
-		ArrayList<Integer> coordinates = new ArrayList<>();
-		coordinates.add(x);
-		coordinates.add(y);
+	public int getLoc() {
+		int[] coordinates = {x,y};
 		return coordinates;
 	}
 }
