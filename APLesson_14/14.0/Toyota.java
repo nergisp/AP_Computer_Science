@@ -1,13 +1,19 @@
 import java.util.Random;
 import java.util.ArrayList;
 
-public class Toyota {
+public class Toyota implements Location {
 	private int[] location;
+	private int x,y;
 	
-	public Toyota(String loc) {
-		
+	public Toyota() {
+		super;
+		l = new double[2]
 	}
 	
+	public Toyota() {
+		x = Integer.parseInteger(l.substring(0,1));
+		y = Integer.parseInteger(l.substring(3));
+	}
 	
 	public int getID() {
 		Random rand = new Random();
@@ -19,10 +25,8 @@ public class Toyota {
 		y = yy;
 	}
 	
-	public ArrayList<Integer> getLoc() {
-		ArrayList<Integer> coordinates = new ArrayList<>();
-		coordinates.add(x);
-		coordinates.add(y);
+	public int[] getLoc() {
+		int[] coordinates = {x,y};
 		return coordinates;
 	}
 }
