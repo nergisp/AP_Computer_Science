@@ -5,9 +5,9 @@ public abstract class Car2 implements Location
 	private int ID;
 	private double[] location = new double[2];
 	
-	public Car()
+	public Car2()
 	{
-     Random rand = new Random();
+     		 Random rand = new Random();
 		 ID = rand.nextInt(900000) + 100000;
 	}
 	
