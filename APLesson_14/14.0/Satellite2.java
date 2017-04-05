@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Satellite
+public class Satellite2
 {
    public static void main(String[]args)
    {
@@ -47,5 +47,4 @@ public class Satellite
    {
        return loc[0] + ", " + loc[1];
    }
-   
-   }
+}
