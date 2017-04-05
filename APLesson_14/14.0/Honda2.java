@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Honda implements Location
+public class Honda2 implements Location
 {
 	private int x,y;
 	
