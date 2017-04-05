@@ -4,13 +4,13 @@ public class Honda2 implements Location
 {
 	private int x,y;
 	
-	public Honda()
+	public Honda2()
 	{
 		x = 0;
 		y = 0;
 	}
 	
-	public Honda(int[] l)
+	public Honda2(int[] l)
 	{
 		x = l[0];
 		y = l[1];
@@ -18,8 +18,8 @@ public class Honda2 implements Location
 	
 	public int getID()
 	{
-     Random rand = new Random();
-		 return rand.nextInt(900000) + 100000;
+     		Random rand = new Random();
+		return rand.nextInt(900000) + 100000;
 	}
 	
 	public void move(int xx, int yy) {
