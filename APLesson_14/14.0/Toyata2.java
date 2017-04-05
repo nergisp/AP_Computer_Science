@@ -5,12 +5,12 @@ public class Toyota2 implements Location {
 	private int[] location;
 	private int x,y;
 	
-	public Toyota() {
+	public Toyota2() {
 		super;
 		l = new double[2]
 	}
 	
-	public Toyota() {
+	public Toyota2() {
 		x = Integer.parseInteger(l.substring(0,1));
 		y = Integer.parseInteger(l.substring(3));
 	}
