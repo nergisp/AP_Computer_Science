@@ -2,12 +2,12 @@ import java.util.Random;
 public class GMC2 implements Location {
 	int x,y;
 	
-	public GMC() {
+	public GMC2() {
 		x=0;
 		y=0;
 	}
 	
-	public int GMC(int xx, int yy) {
+	public int GMC2(int xx, int yy) {
 		x=xx;
 		y=yy;
 	}
