@@ -1,4 +1,4 @@
-public class StudentAdvance extends Ticket {
+public class StudentAdvance extends Advance {
 	
 	private int daysLeft;
 	
