@@ -1,9 +1,10 @@
-public class StudentAdvance extends Ticket {
+public class StudentAdvance extends Advance {
 	
 	private int daysLeft;
 	
-	public StudentAdvance(int d) {
-		daysLeft = d;
+	public StudentAdvance(int d) {		
+		super();
+		daysLeft=d;
 	}
 	
 	public String getPrice() {
