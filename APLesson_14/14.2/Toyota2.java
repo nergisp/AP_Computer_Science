@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-public class Toyota2 extends Car 
+public class Toyota2 extends Car2
 {
 	private double xcoor;
 	private double ycoor;
