@@ -1,9 +1,9 @@
-public class Honda extends Car
+public class Honda1 extends Car1
 {
 	private double xcoor;
 	private double ycoor;
 	
-	public Honda(double [] p)
+	public Honda1(double [] p)
 	{
 		super();
 		move(p[0], p[1]);
