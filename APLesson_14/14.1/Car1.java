@@ -1,9 +1,9 @@
-public abstract class Car implements Location
+public abstract class Car1 implements Location1
 {
 	private int ID;
 	private double[] location;
 	
-	public Lab_14_1_CarClass()
+	public Car1()
 	{
 		ID = (int) (Math.random() * 1000000) + 1;
 		location = new double[2];
