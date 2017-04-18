@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-public class Toyota extends CarClass
+public class Toyota1 extends Car1
 {
 	private double xcoor;
 	private double ycoor;
 	
-	public Toyota(String p)
+	public Toyota1(String p)
 	{
 		super();
         ArrayList<String> position = new ArrayList<>(Arrays.asList(p.split(", ")));
