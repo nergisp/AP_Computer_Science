@@ -1,14 +1,11 @@
-import java.util.Random;
-
-public abstract class Car2 implements Location2
+public abstract class Car implements Location
 {
 	private int ID;
 	private double[] location = new double[2];
 	
-	public Car2()
+	public Car()
 	{
-     		 Random rand = new Random();
-		 ID = rand.nextInt(900000) + 100000;
+		ID = (int) (Math.random() * 1000000) + 1;
 	}
 	
 	public void move(double x, double y)
