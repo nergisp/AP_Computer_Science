@@ -1,4 +1,4 @@
-public class Honda2 extends Car 
+public class Honda2 extends Car2
 {
     private double xcoor;
 	private double ycoor;
