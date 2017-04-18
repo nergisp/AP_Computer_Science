@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Satellite
+public class Satellite1
 {
    public static void main(String[]args)
    {
@@ -8,29 +8,29 @@ public class Satellite
 	   double[] honLoc = {5, 6};
 	   double[] home = {0, 0};
 	   
-       locate.add(new Honda(honLoc));
-       locate.add(new Toyota("8, 9"));
-       locate.add(new GMC(3, 8));
+       locate.add(new Honda1(honLoc));
+       locate.add(new Toyota1("8, 9"));
+       locate.add(new GMC1(3, 8));
 	   
 	   String printout = "\n\n" +
                "==========================" + "\nStarting locations...";
 
 
-       for (Location l : locate)
+       for (Location1 l : locate)
        {
            printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
        }
 	   
        printout += "\n\nDistance from home...";
 
-		for(Location l : locate)
+		for(Location1 l : locate)
 		{
 			printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home) + ")";
 		}
 		
 		printout += "\n\n==========================\n";
 		
-		for (Location l : locate)
+		for (Location1 l : locate)
 		{
             double one = Math.random() * 99 + 1;
 			double two = Math.random() * 99 + 1;
@@ -42,7 +42,7 @@ public class Satellite
 
 		printout += "\n\nDistance from home...";
 
-		for (Location l : locate)
+		for (Location1 l : locate)
 		{
 			printout += "\nDistance for " + l.getID() + ": " + getDistance(l.getLoc(), home);
 		}
