@@ -1,35 +1,11 @@
-import java.util.Random;
-
-public class Honda2 implements Location2
+public class Honda extends Car 
 {
-	private int x,y;
+    private double xcoor;
+	private double ycoor;
 	
-	public Honda2()
+    public Honda(double[] p) 
 	{
-		x = 0;
-		y = 0;
-	}
-	
-	public Honda2(int[] l)
-	{
-		x = l[0];
-		y = l[1];
-	}
-	
-	public int getID()
-	{
-     		Random rand = new Random();
-		return rand.nextInt(900000) + 100000;
-	}
-	
-	public void move(int xx, int yy) {
-		x = xx;
-		y = yy;
-	}
-	
-	public int[] getLoc()
-	{
-		int[] coordinates = {x,y};
-		return coordinates;
-	}
+        super();
+        move(p[0], p[1]);
+    }
 }
