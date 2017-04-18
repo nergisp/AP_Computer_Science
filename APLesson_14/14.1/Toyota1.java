@@ -1,32 +1,28 @@
-import java.util.Random;
 import java.util.ArrayList;
-
-public class Toyota implements Location {
-	private int[] location;
-	private int x,y;
+import java.util.Arrays;
+public class Toyota extends CarClass
+{
+	private double xcoor;
+	private double ycoor;
 	
-	public Toyota() {
+	public Toyota(String p)
+	{
 		super();
-		l = new double[2];
+        ArrayList<String> position = new ArrayList<>(Arrays.asList(p.split(", ")));
+        Double pX = Double.parseDouble(position.get(0));
+		Double pY = Double.parseDouble(position.get(1));
+        move(pX, pY);
 	}
 	
-	public Toyota() {
-		x = Integer.parseInteger(l.substring(0,1));
-		y = Integer.parseInteger(l.substring(3));
+	public void move(double x, double y)
+	{
+		this.xcoor += x;
+		this.ycoor += y;
 	}
 	
-	public int getID() {
-		Random rand = new Random();
-		return rand.nextInt(900000) + 100000;
-	}
-	
-	public void move(int xx, int yy) {
-		x = xx;
-		y = yy;
-	}
-	
-	public int[] getLoc() {
-		int[] coordinates = {x,y};
-		return coordinates;
+	public double [] getLoc()
+	{
+		double [] location = {xcoor, ycoor};
+		return location;
 	}
 }
