@@ -1,22 +1,35 @@
-import java.util.Random;
-
-public abstract Car implements Location
+public class Honda implements Location
 {
-	private int ID;
-	private double[] location;
+	private double xcoor;
+	private double ycoor;
 	
-	public Car()
+	public Honda()
 	{
-
-     Random rand = new Random();
-		 ID = rand.nextInt(900000) + 1000
-     location = new double[2];
+		xcoor = ycoor = 0;
 	}
 	
-	public abstract void move(double xx, double yy);
+	public Honda(double [] location)
+	{
+		xcoor = location[0];
+		ycoor = location[1];	
+	}
 	
 	public int getID()
 	{
-		return ID;
+		return (int) (Math.random() * 1000000) + 1;
 	}
+	
+	public void move(double x, double y)
+	{
+		xcoor = x;
+		ycoor = y;
+	}
+	
+	public double[] getLoc()
+	{
+		double [] location = {xcoor, ycoor};  
+		return location;
+	}
+	
+	
 }
