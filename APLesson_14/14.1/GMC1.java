@@ -1,23 +1,23 @@
-import java.util.Random;
-import java.util.ArrayList;
-public class GMC {
-	private int x;
-	private int y;
+public class GMC extends Car
+{
+	private double xcoor;
+	private double ycoor;
 	
-	public int getID() {
-		Random rand = new Random();
-		return rand.nextInt(900000) + 100000;
+	public GMC(double x, double y)
+	{
+		super();
+		move(x, y);
 	}
 	
-	public void move(int xx, int yy) {
-		x = xx;
-		y = yy;
+	public void move(double x, double y)
+	{
+		this.xcoor += x;
+		this.ycoor += y;
 	}
 	
-	public ArrayList<Integer> getLoc() {
-		ArrayList<Integer> coordinates = new ArrayList<>();
-		coordinates.add(x);
-		coordinates.add(y);
-		return coordinates;
+	public double [] getLoc()
+	{
+		double [] location = {xcoor, ycoor};
+		return location;
 	}
 }
