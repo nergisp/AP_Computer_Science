@@ -1,5 +1,5 @@
 
-public class GMC2 extends Car
+public class GMC2 extends Car2
 {
 	private double xcoor;
 	private double ycoor;
