@@ -3,7 +3,7 @@ public class Satellite2
 {
     public static void main(String[]args) 
 	{
-        ArrayList<Location> locate = new ArrayList<>();
+        ArrayList<Location2> locate = new ArrayList<>();
 
 		double[] honLoc = {5, 6};
 		double[] home = {0, 0};
