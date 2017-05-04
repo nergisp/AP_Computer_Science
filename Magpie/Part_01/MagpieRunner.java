@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @author Pswag who used to use python 24/7
  * @version April 2017
  */
-public class MagpieRunner2
+public class MagpieRunner
 {
 
 	/**
