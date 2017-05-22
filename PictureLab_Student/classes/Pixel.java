@@ -51,12 +51,10 @@ public class Pixel
 		return red;
 	}
 	
-	public int getGreen() { 
-		
+	public int getGreen()
+	{ 
 		int value = picture.getBasicPixel(x,y);
-
 		int green = (value >>  8) & 0xff;
-		
 		return green;
 	}
 	
@@ -66,12 +64,10 @@ public class Pixel
 		return green;
 	}
 	
-	public int getBlue() { 
-		
+	public int getBlue()
+	{ 	
 		int value = picture.getBasicPixel(x,y);
-
 		int blue = value & 0xff;
-		
 		return blue;
 	}
 	
@@ -84,13 +80,9 @@ public class Pixel
 	public Color getColor() 
 	{ 
 		int value = picture.getBasicPixel(x,y);
-
 		int red = (value >> 16) & 0xff;
-		
 		int green = (value >>  8) & 0xff;
-		
 		int blue = value & 0xff;
-		
 		return new Color(red,green,blue);
 	}
 	
@@ -106,7 +98,6 @@ public class Pixel
 	public void updatePicture(int alpha, int red, int green, int blue)
 	{
 		int value = (alpha << 24) + (red << 16) + (green << 8) + blue;
-		
 		picture.setBasicPixel(x,y,value);
 	}
 	
@@ -122,28 +113,24 @@ public class Pixel
 	public void setRed(int value)
 	{
 		int red = correctValue(value);
-		
 		updatePicture(getAlpha(), red, getGreen(), getBlue());
 	} 
 	
 	public void setGreen(int value)
 	{
 		int green = correctValue(value);
-		
 		updatePicture(getAlpha(), getRed(), green, getBlue());
 	} 
 	
 	public void setBlue(int value)
 	{
 		int blue = correctValue(value);
-		
 		updatePicture(getAlpha(), getRed(), getGreen(), blue);
 	} 
 	
 	public void setAlpha(int value)
 	{
 		int alpha = correctValue(value);
-		
 		updatePicture(alpha, getRed(), getGreen(), getBlue());
 	} 
 	
