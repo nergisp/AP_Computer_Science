@@ -128,7 +128,7 @@ public class SimplePicture implements DigitalPicture
 	public void setTitle(String title) 
 	{
 		this.title = title;
-		if (pictureFrame != null;
+		if (pictureFrame != null);
 		{
 			pictureFrame.setTitle(title);
 		}
