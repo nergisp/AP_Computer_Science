@@ -5,7 +5,7 @@ public class IntArrayWorker
 	
 	public void setMatrix(int[][] theMatrix)
 	{
-	matrix = theMatrix;
+	    matrix = theMatrix;
 	}
 	
 	public int getTotal()
