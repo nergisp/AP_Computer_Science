@@ -40,11 +40,11 @@ public class IntArrayWorker
 	    int count = 1;
 	    for (int row = 0; row < matrix.length; row++)
 	    {
-		for (int col = 0; col < numCols; col++)
-		{
-		matrix[row][col] = count;
-		count++;
-		}
+			for (int col = 0; col < numCols; col++)
+			{
+				matrix[row][col] = count;
+				count++;
+			}
 	    }
 	}
 	
@@ -52,11 +52,11 @@ public class IntArrayWorker
 	{
 	    for (int row = 0; row < matrix.length; row++)
 	    {
-		for (int col = 0; col < matrix[0].length; col++)
-		{
-		System.out.print( matrix[row][col] + " " );
-		}
-		System.out.println();
+			for (int col = 0; col < matrix[0].length; col++)
+			{
+				System.out.print( matrix[row][col] + " " );
+			}
+			System.out.println();
 	    }
 	    System.out.println();
 	}
@@ -64,31 +64,30 @@ public class IntArrayWorker
 	public void fillPattern1()
 	{
 	    for (int row = 0; row < matrix.length; row++)
-	    {
-		for (int col = 0; col < matrix[0].length; 
-			 col++)
 		{
-		if (row < col)
-			matrix[row][col] = 1;
-		else if (row == col)
-			matrix[row][col] = 2;
-		else
-			matrix[row][col] = 3;
-		}
+			for (int col = 0; col < matrix[0].length; col++)
+			{
+			if (row < col)
+				matrix[row][col] = 1;
+			else if (row == col)
+				matrix[row][col] = 2;
+			else
+				matrix[row][col] = 3;
+			}
 	    }
 	}
  
 	public int getCount(int num)
 	{
 	    int count = 0;
-	    for (int row = 0; row < matrix.length; row++)
-	    {
-		for (int col = 0; col < matrix[0].length; col++)
-		{
-		    if (matrix[row][col] == num) {count++;}
-		}
-	     }
-	     return count;
+			for (int row = 0; row < matrix.length; row++)
+			{
+				for (int col = 0; col < matrix[0].length; col++)
+				{
+					if (matrix[row][col] == num) {count++;}
+				}
+			}
+	    return count;
 	}
 
 	public int getLargest()
