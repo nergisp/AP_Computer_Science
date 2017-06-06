@@ -30,10 +30,13 @@ public class Card
     public boolean matches(Card otherCard)
     {
         if (this.suit.equals(otherCard.suit) && this.rank.equals(otherCard.rank) && this.pointValue == otherCard.pointValue)
-	{
+		{
            return true;
         }
-        return false;
+		else
+		{
+			return false;
+		}
     }
 
     @Override
