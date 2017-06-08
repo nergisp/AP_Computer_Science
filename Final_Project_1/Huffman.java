@@ -1,8 +1,10 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+
+
 import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Huffman {
     static final boolean newTextBasedOnOldOne = false;
@@ -12,6 +14,7 @@ public class Huffman {
     static String text = "";
     static String encoded = "";
     static String decoded = "";
+    static ArrayList<String> tlist;
     static int ASCII[] = new int[128];
 
     public static void main(String[] args) {
@@ -43,7 +46,7 @@ public class Huffman {
             handleDecodingNewText(scanner);
         }
         return false;
-    }
+        }
 
     private static void handleDecodingNewText(Scanner scanner) {
         System.out.println("Enter the text to decode:");
@@ -56,13 +59,17 @@ public class Huffman {
         System.out.println("Enter the text to encode:");
         text = scanner.nextLine();
         System.out.println("Text to Encode: " + text);
-
         if (!IsSameCharacterSet()) {
             System.out.println("Not Valid input");
             text = "";
             return true;
         }
-        encodeText();
+        tlist = new ArrayList<>(Arrays.asList(text.split("")));
+        if (ifOneChar()) {
+            printOneChar(tlist);
+            return true;
+        }
+        else encodeText();
         return false;
     }
 
@@ -70,6 +77,11 @@ public class Huffman {
         int oldTextLength = text.length();
         System.out.println("Enter the text:");
         text = scanner.nextLine();
+        tlist = new ArrayList<>(Arrays.asList(text.split("")));
+        if (ifOneChar()) {
+            printOneChar(tlist);
+            return true;
+        }
         if (newTextBasedOnOldOne && (oldTextLength != 0 && !IsSameCharacterSet())) {
             System.out.println("Not Valid input");
             text = "";
@@ -84,7 +96,6 @@ public class Huffman {
             calculateCharIntervals(nodes, false);
             buildTree(nodes);
             generateCodes(nodes.peek(), "");
-
             printCodes();
             System.out.println("-- Encoding/Decoding --");
             encodeText();
@@ -101,6 +112,35 @@ public class Huffman {
                 break;
             }
         return flag;
+    }
+
+    private static boolean ifOneChar() {
+        int x=0;
+        for(int i=0; i<tlist.size(); i++) {
+            if (i == 0) continue;
+            else {
+                String current_char = tlist.get(i - 1);
+                if (tlist.get(i).equals(current_char)) { x++;}
+            }
+        }
+        return x == (tlist.size()-1);
+    }
+
+    private static void printOneChar(ArrayList<String> t) {
+        String c = t.get(0);
+        String b = "0";
+        ArrayList<String> tb = new ArrayList<String>();
+        int a = 0;
+        while (a < t.size()) {tb.add(b); a++;}
+        StringBuilder sb = new StringBuilder();
+        StringBuilder eb = new StringBuilder();
+        for (String s : t) {sb.append(s);}
+        for (String e : tb) {eb.append(e);}
+        System.out.println("--- Binary Codes ---");
+        System.out.println(c + ":" + b);
+        System.out.println("-- Encoding/Decoding --");
+        System.out.println("Encoded Text: " + eb.toString());
+        System.out.println("Decoded Text: " + sb.toString());
     }
 
     private static void decodeText() {
